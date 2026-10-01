@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "slabplacer",
+  "version": "${version}",
+  "name": "Slab Placer",
+  "description": "Choose which slab placements to allow, prevent double slabs, or return to vanilla behavior.",
+  "authors": [
+    "Vali"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.valithedev.slabplacer.SlabPlacerClient"
+    ],
+    "modmenu": [
+      "com.valithedev.slabplacer.integration.SlabPlacerModMenu"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "slabplacer.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": ">=${fabric_api_min_version}"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
